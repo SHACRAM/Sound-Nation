@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { ReseauxSociaux } from "./pages/reseauxSociaux";
+import { ReseauxSociaux } from "./pages/ReseauxSociaux";
+import { InformationsFaq } from "./pages/informations&faq";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -16,10 +17,10 @@ const router = createBrowserRouter([
   //     path: "/carte",
   //     element: <Carte />,
   //   },
-  //   {
-  //     path: "/informations&faq",
-  //     element: <InformationsFaq />,
-  //   },
+  {
+    path: "/informations&faq",
+    element: <InformationsFaq />,
+  },
   //   {
   //     path: "/programmation",
   //     element: <Programmation />,
