@@ -11,7 +11,7 @@ export const DisplayInfosPratiques = () => {
       <ul className="flex-col pl-">
         <li className="text-[white] text-base flex items-center gap-3 mb-5">
           <img
-            src="images/flecheDroite.png"
+            src="../images/flecheDroite.png"
             alt="fleche vers la doite"
             className="w-8"
           />
@@ -21,19 +21,21 @@ export const DisplayInfosPratiques = () => {
         </li>
         <li className="text-[white] text-base flex items-center gap-3 mb-5">
           <img
-            src="images/flecheDroite.png"
+            src="../images/flecheDroite.png"
             alt="fleche vers la doite"
             className="w-8"
           />
-          <NavLink>Conditions générales de vente</NavLink>
+          <NavLink to="/informations&faq/Cgv">
+            Conditions générales de vente
+          </NavLink>
         </li>
         <li className="text-[white] text-base flex items-center gap-3">
           <img
-            src="images/flecheDroite.png"
+            src="../images/flecheDroite.png"
             alt="fleche vers la doite"
             className="w-8"
           />
-          <NavLink>Gestion des cookies</NavLink>
+          <NavLink to="/informations&faq/Cookies">Gestion des cookies</NavLink>
         </li>
       </ul>
     </div>

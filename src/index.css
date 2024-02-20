@@ -6,6 +6,6 @@ html,
 body {
   font-family: "Rubik";
   background-image: url("../images/backGroundSite.jpeg");
-  background-size: inherit;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat;
 }

@@ -3,6 +3,9 @@ import "./App.css";
 import { ReseauxSociaux } from "./pages/ReseauxSociaux";
 import { InformationsFaq } from "./pages/informations&faq";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
+import { Cookies } from "./pages/Cookies";
+import { Cgv } from "./pages/Cgv";
 
 const router = createBrowserRouter([
   //   {
@@ -20,6 +23,18 @@ const router = createBrowserRouter([
   {
     path: "/informations&faq",
     element: <InformationsFaq />,
+  },
+  {
+    path: "/informations&faq/DonneesPersonnelles",
+    element: <DonneesPersonnelles />,
+  },
+  {
+    path: "/informations&faq/Cookies",
+    element: <Cookies />,
+  },
+  {
+    path: "/informations&faq/Cgv",
+    element: <Cgv />,
   },
   //   {
   //     path: "/programmation",
