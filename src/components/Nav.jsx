@@ -8,8 +8,8 @@ export const Nav = () => {
   };
 
   return (
-    <div>
-      <div className="bg-black h-14 flex justify-center gap-3 items-center fixed bottom-0 w-[100%] z-10">
+    <div className="z-20">
+      <div className="bg-black h-14 flex justify-center gap-3 items-center fixed bottom-0 w-[100%] z-30">
         <button className="text-white text-[1.8rem]" onClick={toggleMenu}>
           Menu
         </button>
@@ -25,7 +25,7 @@ export const Nav = () => {
       </div>
 
       <nav
-        className={`flex fixed top-0 right-0 left-0 justify-center items-center bottom-0 bg-black z-1 transition-transform duration-[0.4s] ease-in-out delay-0 transform ${
+        className={`flex fixed top-0 right-0 left-0 justify-center items-center bottom-0 bg-black z-20 transition-transform duration-[0.4s] ease-in-out delay-0 transform ${
           isOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >

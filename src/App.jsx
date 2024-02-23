@@ -5,7 +5,8 @@ import { InformationsFaq } from "./pages/informations&faq";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
 import { Cookies } from "./pages/Cookies";
-import { Cgv } from "./pages/Cgv";
+import { DisplayCgv } from "./components/DisplayCgv";
+import { Programmation } from "./pages/programmation";
 
 const router = createBrowserRouter([
   //   {
@@ -34,12 +35,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/informations&faq/Cgv",
-    element: <Cgv />,
+    element: <DisplayCgv />,
   },
-  //   {
-  //     path: "/programmation",
-  //     element: <Programmation />,
-  //   },
+  {
+    path: "/Programmation",
+    element: <Programmation />,
+  },
   //   {
   //     path: "/patenaires",
   //     element: <Partenaires />,
