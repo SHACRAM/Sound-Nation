@@ -38,11 +38,11 @@ const router = createBrowserRouter([
     element: <DisplayCgv />,
   },
   {
-    path: "/Programmation",
+    path: "/programmation",
     element: <Programmation />,
   },
   //   {
-  //     path: "/patenaires",
+  //     path: "/partenaires",
   //     element: <Partenaires />,
   //   },
 ]);

@@ -375,7 +375,7 @@ export interface ApiGroupeGroupe extends Schema.CollectionType {
   };
   attributes: {
     nom: Attribute.String;
-    Image: Attribute.Media;
+    Image: Attribute.Media & Attribute.Required;
     jour: Attribute.String;
     horaire: Attribute.String;
     scene: Attribute.String;
