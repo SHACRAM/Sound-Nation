@@ -7,7 +7,7 @@ import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
 import { Cookies } from "./pages/Cookies";
 import { DisplayCgv } from "./components/DisplayCgv";
 import { Programmation } from "./pages/programmation";
-
+import { EnSavoirPlus } from "./pages/EnSavoirPlus";
 const router = createBrowserRouter([
   //   {
   //     path: "/",
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/informations&faq",
     element: <InformationsFaq />,
+  },
+  {
+    path: "/EnSavoirPlus/:id",
+    element: <EnSavoirPlus />,
   },
   {
     path: "/informations&faq/DonneesPersonnelles",

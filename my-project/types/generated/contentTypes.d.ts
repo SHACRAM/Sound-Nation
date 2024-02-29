@@ -379,6 +379,7 @@ export interface ApiGroupeGroupe extends Schema.CollectionType {
     jour: Attribute.String;
     horaire: Attribute.String;
     scene: Attribute.String;
+    bio: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
