@@ -8,6 +8,8 @@ import { Cookies } from "./pages/Cookies";
 import { DisplayCgv } from "./components/DisplayCgv";
 import { Programmation } from "./pages/programmation";
 import { EnSavoirPlus } from "./pages/EnSavoirPlus";
+import { Partenaire } from "./pages/partenaires";
+
 const router = createBrowserRouter([
   //   {
   //     path: "/",
@@ -45,10 +47,10 @@ const router = createBrowserRouter([
     path: "/programmation",
     element: <Programmation />,
   },
-  //   {
-  //     path: "/partenaires",
-  //     element: <Partenaires />,
-  //   },
+  {
+    path: "/partenaires",
+    element: <Partenaire />,
+  },
 ]);
 
 function App() {

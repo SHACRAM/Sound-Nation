@@ -1,20 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-export const VignetteGroupe = ({ checkBoxChecked, groupeData }) => {
-  const idGroupe = checkBoxChecked.map((element) => element.id);
-  const groupeAffiche = groupeData.filter((groupe) =>
-    idGroupe.includes(
-      groupe.attributes.jour &&
-        groupe.attributes.scene &&
-        groupe.attributes.horaire
-    )
-  );
-
+export const AffichageGroupeAll = ({ dataAll }) => {
   return (
     <div className="flex flex-wrap mt-[2em]">
-      {groupeAffiche.map((groupe) => (
+      {dataAll.map((groupe) => (
         <div
           className="flex flex-col gap-3 items-center border-[5px] p-3 rounded-[30px] m-5 w-[fit-content] "
           key={groupe.id}

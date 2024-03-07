@@ -11,7 +11,7 @@ export const EnSavoirPlus = () => {
       <div className="bg-black m-10 p-10 flex flex-col items-center gap-[4em] rounded-xl">
         <h1 className="text-white text-[1.5rem] underline">{nom}</h1>
         <img src={image} alt={alt} className="w-[15em] rounded-[30px]" />
-        <p className="text-white text-[1.2rem] flex flex-col items-center">
+        <p className="text-white text-[1.2rem] flex flex-col items-center w-[80%]">
           {bio}
         </p>
         <NavLink to="/programmation">
