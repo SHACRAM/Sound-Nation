@@ -2,11 +2,13 @@ export const Header = () => {
   return (
     <header className="bg-black flex justify-between">
       <div>
-        <img
-          src="../images/logo.png"
-          alt="Logo du festival Sound Nation"
-          className="ml-4 mt-2 mb-4"
-        />
+        <a href="http://localhost:5176/accueil">
+          <img
+            src="../images/logo.png"
+            alt="Logo du festival Sound Nation"
+            className="ml-4 mt-2 mb-4"
+          />
+        </a>
       </div>
       <div className="flex gap-1.5 items-start mt-2 mr-2">
         <img src="../images/fr 1.svg" alt="drapeau français" className="w-6" />

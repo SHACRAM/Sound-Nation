@@ -38,6 +38,7 @@ export const Faq = () => {
       {questionsReponse.map((question) => (
         <Question
           id={question.id}
+          key={question.id}
           question={question.question}
           reponse={question.reponse}
         />

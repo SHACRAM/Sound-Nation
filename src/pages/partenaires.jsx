@@ -49,7 +49,7 @@ export const Partenaire = () => {
                   alt={
                     partenaire.attributes.logo.data.attributes.alternativeText
                   }
-                  className="w-[15em] rounded-[30px]"
+                  className="w-[13em] rounded-[30px]"
                 />
                 <h2 className="text-white underline text-[1.5rem]">
                   {partenaire.attributes.nom}

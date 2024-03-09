@@ -1,20 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import { ReseauxSociaux } from "./pages/ReseauxSociaux";
-import { InformationsFaq } from "./pages/informations&faq";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
-import { Cookies } from "./pages/Cookies";
+import "./App.css";
 import { DisplayCgv } from "./components/DisplayCgv";
-import { Programmation } from "./pages/programmation";
+import { Accueil } from "./pages/Accueil";
+import { Cookies } from "./pages/Cookies";
+import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
 import { EnSavoirPlus } from "./pages/EnSavoirPlus";
+import { InformationsFaq } from "./pages/informations&faq";
 import { Partenaire } from "./pages/partenaires";
+import { Programmation } from "./pages/Programmation";
+import { ReseauxSociaux } from "./pages/ReseauxSociaux";
 
 const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Accueil />,
-  //   },
+  {
+    path: "/",
+    element: <Accueil />,
+  },
   {
     path: "/reseauxSociaux",
     element: <ReseauxSociaux />,

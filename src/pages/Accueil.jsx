@@ -1,9 +1,11 @@
-import { Header } from "../components/Header";
+import { Layout } from "../components/Layout";
+import React from "react";
+import { HomePage } from "../components/HomePage";
 
 export const Accueil = () => {
   return (
-    <main>
-      <Header />
-    </main>
+    <Layout>
+      <HomePage />
+    </Layout>
   );
 };

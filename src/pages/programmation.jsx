@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import { AffichageGroupe } from "../components/AffichageGroupe";
-import { useState, useEffect } from "react";
+import { Filtrage } from "../components/Filtrage";
 import { Layout } from "../components/Layout";
-import { Filtres } from "../components/Filtres";
+import { FilterProvider } from "../contexts/FilterContext";
 
 export const Programmation = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export const Programmation = () => {
     };
     fetchData();
   }, []);
+
   if (isLoading) {
     return <p>Chargement en cours...</p>;
   } else
@@ -36,7 +38,10 @@ export const Programmation = () => {
           <h1 className="text-white flex justify-center p-5 mb-5 text-3xl">
             Programmation
           </h1>
-          <AffichageGroupe data={data} setData={setData} />
+          <FilterProvider>
+            <Filtrage />
+            <AffichageGroupe data={data} />
+          </FilterProvider>
         </div>
       </Layout>
     );
