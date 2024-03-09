@@ -4,7 +4,7 @@ import { getDataFilters } from "../utils/dataFilters";
 import { CheckBoxTest } from "./CheckBoxTest";
 
 export const Filtrage = () => {
-  const [dataFilters, setDataFilters] = useContext(FilterContext);
+  const { dataFilters, setDataFilters } = useContext(FilterContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
