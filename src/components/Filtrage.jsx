@@ -6,9 +6,15 @@ import { CheckBoxTest } from "./CheckBoxTest";
 export const Filtrage = () => {
   const { dataFilters, setDataFilters } = useContext(FilterContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [allChecked, setAllChecked] = useState(true);
+  const [filtersNumber, setFiltersNumber] = useState(0);
 
   useEffect(() => {
-    setDataFilters(getDataFilters());
+    const filters = getDataFilters();
+    const sum =
+      filters.Jours.length + filters.Scenes.length + filters.Heures.length;
+    setDataFilters(filters);
+    setFiltersNumber(sum);
   }, []);
 
   const handleModalDisplay = () => {
@@ -26,6 +32,16 @@ export const Filtrage = () => {
     }
 
     setDataFilters(updatedFilters);
+
+    // Calculate the number of checked filters
+    const checkedFiltersNumber = Object.values(updatedFilters)
+      .flat()
+      .filter((filter) => filter.checked).length;
+
+    // If all filters are checked, set allChecked to true, otherwise set it to false
+    setAllChecked(
+      checkedFiltersNumber === 0 || checkedFiltersNumber === filtersNumber
+    );
   };
 
   return (
@@ -74,7 +90,9 @@ export const Filtrage = () => {
           id="tous"
           handleCheck={() => {
             setDataFilters(getDataFilters());
+            setAllChecked(true);
           }}
+          checked={allChecked}
         />
       </div>
     </div>
@@ -96,6 +114,7 @@ const FiltrageCategorie = ({ nomCategorie, filtres, handleCheck }) => {
               id={filtre.id}
               handleCheck={handleCheck}
               nomCategorie={nomCategorie}
+              checked={filtre.checked}
             />
           </li>
         ))}

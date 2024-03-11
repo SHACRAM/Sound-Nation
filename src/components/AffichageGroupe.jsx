@@ -30,16 +30,14 @@ export const AffichageGroupe = ({ data }) => {
         {data &&
           data.map((groupe) => {
             if (
-              joursValides.includes(groupe.attributes.jour) &&
-              scenesValides.includes(groupe.attributes.scene) &&
-              heuresValides.includes(groupe.attributes.horaire)
+              (joursValides.length === 0 ||
+                joursValides.includes(groupe.attributes.jour)) &&
+              (scenesValides.length === 0 ||
+                scenesValides.includes(groupe.attributes.scene)) &&
+              (heuresValides.length === 0 ||
+                heuresValides.includes(groupe.attributes.horaire))
             ) {
-              {
-                console.log("test");
-                return (
-                  <VignetteGroupeTest key={groupe.id} groupeData={groupe} />
-                );
-              }
+              return <VignetteGroupeTest key={groupe.id} groupeData={groupe} />;
             }
           })}
       </div>
