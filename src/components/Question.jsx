@@ -39,7 +39,7 @@ export const Question = ({ id, question, reponse }) => {
               : "-translate-y-full opacity-0 max-h-0"
           }`}
         >
-          <p className="text-white bg-[#71A984] rounded-b-lg p-2">{reponse}</p>
+          <p className="text-black bg-[#71A984] rounded-b-lg p-2">{reponse}</p>
         </li>
       </ul>
     </div>

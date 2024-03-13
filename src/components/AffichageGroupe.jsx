@@ -26,7 +26,7 @@ export const AffichageGroupe = ({ data }) => {
 
   return (
     <div>
-      <div id="dev">
+      <div className="flex flex-wrap justify-center">
         {data &&
           data.map((groupe) => {
             if (
@@ -37,7 +37,11 @@ export const AffichageGroupe = ({ data }) => {
               (heuresValides.length === 0 ||
                 heuresValides.includes(groupe.attributes.horaire))
             ) {
-              return <VignetteGroupeTest key={groupe.id} groupeData={groupe} />;
+              return (
+                <div>
+                  <VignetteGroupeTest key={groupe.id} groupeData={groupe} />;
+                </div>
+              );
             }
           })}
       </div>

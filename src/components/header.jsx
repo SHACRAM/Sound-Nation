@@ -2,7 +2,7 @@ export const Header = () => {
   return (
     <header className="bg-black flex justify-between">
       <div>
-        <a href="http://localhost:5176/accueil">
+        <a href="http://localhost:5173/">
           <img
             src="../images/logo.png"
             alt="Logo du festival Sound Nation"

@@ -1,6 +1,6 @@
 import React from "react";
-import { Nav } from "./Nav";
 import { Header } from "./Header";
+import { Nav } from "./Nav";
 export const Layout = ({ children }) => {
   return (
     <div>

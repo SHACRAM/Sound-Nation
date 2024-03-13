@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { DisplayCgv } from "./components/DisplayCgv";
 import { Accueil } from "./pages/Accueil";
+import { Concert } from "./pages/Concerts";
 import { Cookies } from "./pages/Cookies";
 import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
 import { EnSavoirPlus } from "./pages/EnSavoirPlus";
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     element: <InformationsFaq />,
   },
   {
-    path: "/EnSavoirPlus/:id",
+    path: "/EnSavoirPlus/:id/:nom/:bio/:alt/:image",
     element: <EnSavoirPlus />,
   },
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/partenaires",
     element: <Partenaire />,
+  },
+  {
+    path: "/Concerts",
+    element: <Concert />,
   },
 ]);
 

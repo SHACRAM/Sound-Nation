@@ -33,12 +33,10 @@ export const Filtrage = () => {
 
     setDataFilters(updatedFilters);
 
-    // Calculate the number of checked filters
     const checkedFiltersNumber = Object.values(updatedFilters)
       .flat()
       .filter((filter) => filter.checked).length;
 
-    // If all filters are checked, set allChecked to true, otherwise set it to false
     setAllChecked(
       checkedFiltersNumber === 0 || checkedFiltersNumber === filtersNumber
     );
@@ -46,7 +44,6 @@ export const Filtrage = () => {
 
   return (
     <div className="p-10 flex flex-col items-center">
-      {console.log(dataFilters)}
       <button
         onClick={handleModalDisplay}
         className={`bg-[#023E33] text-white w-[15em] p-2 rounded-lg flex flex-1 justify-center text-[1.3rem] gap-2 z-30 ${
@@ -71,29 +68,35 @@ export const Filtrage = () => {
       </button>
 
       <div
-        className={` flex flex-row flex-wrap p-5 rounded-lg bg-[#71A984] transition-all ease-in-out duration-[0.2s] delay-0 transform z-1 ${
+        className={` flex flex-row flex-wrap  p-5 rounded-lg bg-[#71A984] transition-all ease-in-out duration-[0.2s] delay-0 transform z-1 ${
           modalIsOpen
             ? "max-h-75 translate-y-0 opacity-100"
             : "-translate-y-full opacity-0 max-h-0"
         }`}
       >
-        {Object.keys(dataFilters).map((key) => (
-          <FiltrageCategorie
-            key={key}
-            nomCategorie={key}
-            filtres={dataFilters[key]}
-            handleCheck={handleCheck}
-          />
-        ))}
-        <CheckBoxTest
-          label="Tous"
-          id="tous"
-          handleCheck={() => {
-            setDataFilters(getDataFilters());
-            setAllChecked(true);
-          }}
-          checked={allChecked}
-        />
+        <div className="flex flex-col p-5">
+          <div className="flex mb-10">
+            <CheckBoxTest
+              label="Tous"
+              id="tous"
+              handleCheck={() => {
+                setDataFilters(getDataFilters());
+                setAllChecked(true);
+              }}
+              checked={allChecked}
+            />
+          </div>
+          <div className="flex flex-wrap gap-[4em]">
+            {Object.keys(dataFilters).map((key) => (
+              <FiltrageCategorie
+                key={key}
+                nomCategorie={key}
+                filtres={dataFilters[key]}
+                handleCheck={handleCheck}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -101,7 +104,7 @@ export const Filtrage = () => {
 
 const FiltrageCategorie = ({ nomCategorie, filtres, handleCheck }) => {
   return (
-    <div>
+    <div className="">
       <h2 className="underline text-[1.5rem] mb-3">{nomCategorie}</h2>
       <ul>
         {filtres.map((filtre) => (

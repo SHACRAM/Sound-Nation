@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
 
 export const Partenaire = () => {
@@ -54,7 +53,7 @@ export const Partenaire = () => {
                 <h2 className="text-white underline text-[1.5rem]">
                   {partenaire.attributes.nom}
                 </h2>
-                <a href={partenaire.attributes.site}>
+                <a href={partenaire.attributes.site} target="_blank">
                   <button className="text-black text-[1.2rem] bg-[#71A984] p-2 rounded-lg border active:bg-[#023E33] active:text-white hover:bg-[#93c9a5]">
                     Nous découvrire
                   </button>

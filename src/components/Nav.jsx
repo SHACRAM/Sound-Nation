@@ -43,7 +43,12 @@ export const Nav = () => {
             <NavLink to="/carte">Carte</NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
-            <NavLink to="https://shotgun.live/fr">Billetterie</NavLink>
+            <NavLink to="/Concerts">Concerts</NavLink>
+          </li>
+          <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
+            <NavLink to="https://shotgun.live/fr" target="_blank">
+              Billetterie
+            </NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-10 text-lg">
             <NavLink to="/programmation">Programmation</NavLink>
