@@ -362,74 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiGroupeGroupe extends Schema.CollectionType {
-  collectionName: 'groupes';
-  info: {
-    singularName: 'groupe';
-    pluralName: 'groupes';
-    displayName: 'groupes';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nom: Attribute.String;
-    Image: Attribute.Media & Attribute.Required;
-    jour: Attribute.String;
-    horaire: Attribute.String;
-    scene: Attribute.String;
-    bio: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::groupe.groupe',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::groupe.groupe',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPartenairePartenaire extends Schema.CollectionType {
-  collectionName: 'partenaires';
-  info: {
-    singularName: 'partenaire';
-    pluralName: 'partenaires';
-    displayName: 'partenaires';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    logo: Attribute.Media;
-    nom: Attribute.String;
-    site: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::partenaire.partenaire',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::partenaire.partenaire',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -851,6 +783,108 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiGroupeGroupe extends Schema.CollectionType {
+  collectionName: 'groupes';
+  info: {
+    singularName: 'groupe';
+    pluralName: 'groupes';
+    displayName: 'groupes';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nom: Attribute.String;
+    Image: Attribute.Media & Attribute.Required;
+    jour: Attribute.String;
+    horaire: Attribute.String;
+    scene: Attribute.String;
+    bio: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::groupe.groupe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::groupe.groupe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMapPlaceMapPlace extends Schema.CollectionType {
+  collectionName: 'map_places';
+  info: {
+    singularName: 'map-place';
+    pluralName: 'map-places';
+    displayName: 'mapPlace';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    type: Attribute.String;
+    nom: Attribute.String;
+    marker: Attribute.JSON & Attribute.Required;
+    couleur: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::map-place.map-place',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::map-place.map-place',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPartenairePartenaire extends Schema.CollectionType {
+  collectionName: 'partenaires';
+  info: {
+    singularName: 'partenaire';
+    pluralName: 'partenaires';
+    displayName: 'partenaires';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logo: Attribute.Media;
+    nom: Attribute.String;
+    site: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partenaire.partenaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partenaire.partenaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -861,8 +895,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::groupe.groupe': ApiGroupeGroupe;
-      'api::partenaire.partenaire': ApiPartenairePartenaire;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -871,6 +903,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::groupe.groupe': ApiGroupeGroupe;
+      'api::map-place.map-place': ApiMapPlaceMapPlace;
+      'api::partenaire.partenaire': ApiPartenairePartenaire;
     }
   }
 }

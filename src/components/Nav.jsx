@@ -40,7 +40,7 @@ export const Nav = () => {
             <NavLink to="/informations&faq">Informations & FAQ</NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
-            <NavLink to="/carte">Carte</NavLink>
+            <NavLink to="/Carte">Carte</NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
             <NavLink to="/Concerts">Concerts</NavLink>

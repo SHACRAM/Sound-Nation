@@ -55,14 +55,16 @@ export const Concert = () => {
     return (
       <Layout>
         <Element name="scene1" className="bg-black m-10 p-10 rounded-lg">
-          <h2 className="text-white text-3xl flex justify-center">Scène 1</h2>
+          <h2 className="text-white text-[3rem] flex justify-center">
+            Scène 1
+          </h2>
           <div className="flex justify-center mt-3">
             <Link
               to="scene2"
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 2
             </Link>
@@ -72,7 +74,7 @@ export const Concert = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 3
             </Link>
@@ -98,14 +100,16 @@ export const Concert = () => {
         </Element>
 
         <div id="scene2" className="bg-black m-10 p-10 rounded-lg">
-          <h2 className="text-white text-3xl flex justify-center">Scène 2</h2>
+          <h2 className="text-white text-[3rem] flex justify-center">
+            Scène 2
+          </h2>
           <div className="flex justify-center mt-3">
             <Link
               to="scene1"
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 1
             </Link>
@@ -115,7 +119,7 @@ export const Concert = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 3
             </Link>
@@ -139,14 +143,16 @@ export const Concert = () => {
           </div>
         </div>
         <div id="scene3" className="bg-black m-10 p-10 rounded-lg">
-          <h2 className="text-white text-3xl flex justify-center">Scène 3</h2>
+          <h2 className="text-white text-[3rem] flex justify-center">
+            Scène 3
+          </h2>
           <div className="flex justify-center mt-3">
             <Link
               to="scene1"
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 1
             </Link>
@@ -156,7 +162,7 @@ export const Concert = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              className="text-white underline"
+              className="text-white underline cursor-pointer"
             >
               Scène 2
             </Link>

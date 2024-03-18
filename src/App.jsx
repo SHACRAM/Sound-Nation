@@ -1,7 +1,9 @@
+import "leaflet/dist/leaflet.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { DisplayCgv } from "./components/DisplayCgv";
 import { Accueil } from "./pages/Accueil";
+import { Carte } from "./pages/Carte";
 import { Concert } from "./pages/Concerts";
 import { Cookies } from "./pages/Cookies";
 import { DonneesPersonnelles } from "./pages/DonneesPersonnelles";
@@ -20,10 +22,10 @@ const router = createBrowserRouter([
     path: "/reseauxSociaux",
     element: <ReseauxSociaux />,
   },
-  //   {
-  //     path: "/carte",
-  //     element: <Carte />,
-  //   },
+  {
+    path: "/Carte",
+    element: <Carte />,
+  },
   {
     path: "/informations&faq",
     element: <InformationsFaq />,
