@@ -34,7 +34,7 @@ export const Carte = () => {
   } else
     return (
       <Layout>
-        <div className="bg-black flex rounded-lg m-10 ">
+        <div className="bg-black flex rounded-lg m-10 mb-[5em]">
           <div className="w-[100%] p-5">
             <h1 className="text-white text-[2rem] flex justify-center">
               Carte du festival

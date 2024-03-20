@@ -39,8 +39,32 @@ export const getDataFilters = () => {
         name: "Scène",
         checked: false,
       },
+      {
+        label: "4",
+        id: "4",
+        name: "Scène",
+        checked: false,
+      },
+      {
+        label: "5",
+        id: "5",
+        name: "Scène",
+        checked: false,
+      },
     ],
     Heures: [
+      {
+        label: "17h",
+        id: "17h",
+        name: "Horaire",
+        checked: false,
+      },
+      {
+        label: "18h",
+        id: "18h",
+        name: "Horaire",
+        checked: false,
+      },
       {
         label: "19h",
         id: "19h",

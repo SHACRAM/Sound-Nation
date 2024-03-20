@@ -21,16 +21,16 @@ export const HomePage = () => {
           L'année 2023 c'était :
         </h2>
         <p className="text-white text-[1.5rem] flex flex-col items-center mt-8">
-          <strong className="text-[#71A984] text-[3rem]">30</strong>
+          <strong className="text-[#71A984] text-[3rem]">35</strong>
           <br /> artistes
         </p>
         <p className="text-white text-[1.5rem] flex flex-col items-center mt-8">
-          <strong className="text-[#71A984] text-[3rem]">50 </strong>
+          <strong className="text-[#71A984] text-[3rem]">60 </strong>
           <br />
           heures de live
         </p>
         <p className="text-white text-[1.5rem] flex flex-col items-center mt-8">
-          <strong className="text-[#71A984] text-[3rem]">95 000</strong>
+          <strong className="text-[#71A984] text-[3rem]">195 000</strong>
           <br /> spectateurs
         </p>
       </div>
