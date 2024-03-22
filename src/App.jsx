@@ -11,16 +11,11 @@ import { EnSavoirPlus } from "./pages/EnSavoirPlus";
 import { InformationsFaq } from "./pages/informations&faq";
 import { Partenaire } from "./pages/partenaires";
 import { Programmation } from "./pages/Programmation";
-import { ReseauxSociaux } from "./pages/ReseauxSociaux";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Accueil />,
-  },
-  {
-    path: "/reseauxSociaux",
-    element: <ReseauxSociaux />,
   },
   {
     path: "/Carte",

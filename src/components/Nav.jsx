@@ -34,9 +34,6 @@ export const Nav = () => {
             <NavLink to="/partenaires">Nos partenaires</NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
-            <NavLink to="/reseauxSociaux">Réseaux sociaux</NavLink>
-          </li>
-          <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">
             <NavLink to="/informations&faq">Informations & FAQ</NavLink>
           </li>
           <li className="text-white flex bg-[#023E33] justify-center rounded-[50px] p-4 mb-6 text-lg">

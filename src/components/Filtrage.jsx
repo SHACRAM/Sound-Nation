@@ -53,7 +53,7 @@ export const Filtrage = () => {
         Filtres
         <img
           className="w-8"
-          src="../public/images/filtre.svg"
+          src="../images/filtre.svg"
           alt="logo pour les filtres"
         />
         <img
@@ -62,7 +62,7 @@ export const Filtrage = () => {
               ? "rotate-0 transition-transform ease-in-out duration-[0.4s]"
               : "rotate-180 transition-transform ease-in-out duration-[0.4s]"
           }`}
-          src="../public/images/angle-up-solid.svg "
+          src="../images/angle-up-solid.svg "
           alt="chevron pour ouvir fermer le menu"
         />
       </button>

@@ -8,7 +8,7 @@ export const HomePage = () => {
       <div className="bg-black m-10 p-10 rounded-lg flex flex-col items-center">
         <img
           className="w-[100%] rounded-lg"
-          src="../public/images/photoFestival.png"
+          src="../images/PhotoFestival.png"
           alt="Photo du festival Sound Nation 2023"
         />
         <p className="text-white mt-[3em] text-[1.2rem] bg-[#023E33] p-3 rounded-lg">

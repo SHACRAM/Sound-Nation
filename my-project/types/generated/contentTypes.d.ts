@@ -860,6 +860,7 @@ export interface ApiPartenairePartenaire extends Schema.CollectionType {
     singularName: 'partenaire';
     pluralName: 'partenaires';
     displayName: 'partenaires';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -868,6 +869,7 @@ export interface ApiPartenairePartenaire extends Schema.CollectionType {
     logo: Attribute.Media;
     nom: Attribute.String;
     site: Attribute.String;
+    type: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

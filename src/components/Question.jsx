@@ -26,7 +26,7 @@ export const Question = ({ id, question, reponse }) => {
                   ? "rotate-0 transition-transform ease-in-out duration-[0.4s]"
                   : "rotate-180 transition-transform ease-in-out duration-[0.4s]"
               }`}
-              src="../public/images/angle-up-solid.svg"
+              src="../images/angle-up-solid.svg"
               alt="Image d'un chevron"
             />
           </button>

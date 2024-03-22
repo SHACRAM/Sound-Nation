@@ -4,7 +4,8 @@
   "info": {
     "singularName": "partenaire",
     "pluralName": "partenaires",
-    "displayName": "partenaires"
+    "displayName": "partenaires",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,19 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "nom": {
       "type": "string"
     },
     "site": {
+      "type": "string"
+    },
+    "type": {
       "type": "string"
     }
   }
